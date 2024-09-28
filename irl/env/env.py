@@ -5,7 +5,7 @@ from typing import Any, Sequence, SupportsFloat, SupportsInt, TypeVar
 import numpy as np
 
 ObsType = np.ndarray
-ActionType = TypeVar("ActionType", np.ndarray, SupportsFloat, SupportsInt)
+ActionType = np.ndarray | int | float
 
 
 class Env:
@@ -32,7 +32,7 @@ class Env:
         action: ActionType,  # noqa: ARG002
     ) -> tuple[
         ObsType,
-        SupportsFloat,
+        float,
         bool,
         bool,
     ]:
@@ -44,7 +44,7 @@ class Env:
 
         Returns:
         -------
-            tuple[ ObsType, SupportsFloat, bool, bool, ]: return observation space, reward, terminate, truncated
+            tuple[ ObsType, float, bool, bool, ]: return observation space, reward, terminate, truncated
 
         """
         msg = "step not implemented"
