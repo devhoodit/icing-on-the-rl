@@ -164,8 +164,7 @@ Follow table shows implemented RL methods
 |PPO|:x:| | |
 
 
-[^1] Playing Atari with Deep Reinforcement Learning is first introduction of DQL algorithm and next paper Human-level control throgh deep reinforcement learning proposes some advanced techniques
-
-
 ## Issue
 If there is any issue in algorithm, code or docs etc. Feel free to make issue  
+
+[^1]: Playing Atari with Deep Reinforcement Learning is first introduction of DQL algorithm and next paper Human-level control throgh deep reinforcement learning proposes some advanced techniques
