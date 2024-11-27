@@ -1,7 +1,5 @@
 """hook for training."""
 
-from typing import SupportsFloat
-
 from irl.env.env import ActionType, ObsType
 
 
@@ -42,7 +40,7 @@ class BaseHook:
         self,
         step_n: int,
         obs: ObsType,
-        reward: SupportsFloat,
+        reward: float,
     ) -> None:
         """Call hook after step.
 
@@ -50,6 +48,6 @@ class BaseHook:
         ----
             step_n (int): step in total env
             obs (ObsType): state after action
-            reward (SupportsFloat): reward after action
+            reward (float): reward after action
 
         """
