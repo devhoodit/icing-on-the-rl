@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from irl.methods.hook import BaseHook
+from irl.hook.hook import BaseHook
 
 if TYPE_CHECKING:
     from irl.agent.agent import Agent
