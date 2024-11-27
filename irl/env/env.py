@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Sequence, SupportsFloat, SupportsInt, TypeVar
+from typing import Any, Sequence, SupportsFloat
 
 import numpy as np
 
