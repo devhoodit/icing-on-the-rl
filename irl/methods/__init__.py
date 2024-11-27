@@ -4,6 +4,6 @@ DQL.
 """
 
 from irl.agent import agent
-from irl.methods import eval, hook, qlearning
+from irl.methods import eval, qlearning
 
-__all__ = ["qlearning", "eval", "hook", "agent"]
+__all__ = ["qlearning", "eval", "agent"]
