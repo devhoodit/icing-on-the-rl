@@ -11,8 +11,8 @@ from torch import Tensor, nn, optim
 from torch.nn.utils.clip_grad import clip_grad_value_
 
 from irl.agent import Agent
+from irl.hook import BaseHook
 from irl.methods.eval import eval_agent
-from irl.methods.hook import BaseHook
 
 if TYPE_CHECKING:
     from irl.env.env import ActionType, Env, ObsType
@@ -32,7 +32,7 @@ class Transition(NamedTuple):
     def list_to_batch(
         transitions: list[Transition],
     ) -> TransitionBatch:
-        """Wrapping Transitions list to TransitionBatch.
+        """Wrap Transitions list to TransitionBatch.
 
         Args:
         ----
@@ -42,7 +42,7 @@ class Transition(NamedTuple):
         -------
             TransitionBatch: transition batch for learning
 
-        """  # noqa: D401
+        """
         state_batch, action_batch, reward_batch, next_state_batch = zip(*transitions)
         return TransitionBatch(state_batch, action_batch, reward_batch, next_state_batch)
 
@@ -231,7 +231,8 @@ class DQL:
             score = 0.0
             hook.before_episode(epi_n)
             state = self.env.reset()
-            while True:
+            done = False
+            while not done:
                 if sampling_policy.is_random(total_step):
                     selected_action = self.env.select_random_action()
                 else:
@@ -260,8 +261,7 @@ class DQL:
                     sampled_batch = Transition.list_to_batch(replay_memory.sample(batch_size))
                     dqn_optimizer.optimize(sampled_batch)
 
-                if terminated or truncated:
-                    break
+                done = terminated or truncated
             hook.after_episode(epi_n, score)
 
     def eval(self, episode: int, hook: BaseHook | None = None) -> None:
