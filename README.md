@@ -160,5 +160,12 @@ Follow table shows implemented RL methods
 :heavy_check_mark: - implemented, :hourglass_flowing_sand: - proceeding, :x: - not yet  
 |method|implemented|code reference|paper
 |---|:---:|---|---|
-|DQL (Deep Q Learning)|:heavy_check_mark:|https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html|[Human-level control through deep reinforcement learning (Nature - 2015)](https://www.nature.com/articles/nature14236)|
+|DQL (Deep Q Learning)|:heavy_check_mark:|https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html|[Human-level control through deep reinforcement learning (Nature - 2015)](https://www.nature.com/articles/nature14236)[^1]|
 |PPO|:x:| | |
+
+
+[^1] Playing Atari with Deep Reinforcement Learning is first introduction of DQL algorithm and next paper Human-level control throgh deep reinforcement learning proposes some advanced techniques
+
+
+## Issue
+If there is any issue in algorithm, code or docs etc. Feel free to make issue  
