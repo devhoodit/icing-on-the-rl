@@ -160,8 +160,8 @@ Follow table shows implemented RL methods
 :heavy_check_mark: - implemented, :hourglass_flowing_sand: - proceeding, :x: - not yet  
 |method|implemented|code reference|paper
 |---|:---:|---|---|
-|DQL (Deep Q Learning)|:heavy_check_mark:|https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html|[Human-level control through deep reinforcement learning (Nature - 2015)](https://www.nature.com/articles/nature14236)[^1]|
-|PPO|:x:| | |
+|DQL (Deep Q Learning)|:heavy_check_mark:|[pytorch](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)|[Human-level control through deep reinforcement learning (Nature - 2015)](https://www.nature.com/articles/nature14236)[^1]|
+|PPO|:hourglass_flowing_sand:(discrete, clip only)|OpenAI|[Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)|
 
 
 ## Issue
