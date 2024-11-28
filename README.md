@@ -162,7 +162,8 @@ Follow table shows implemented RL methods
 |---|:---:|---|---|
 |DQL (Deep Q Learning)|:heavy_check_mark:|[pytorch](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)|[Human-level control through deep reinforcement learning (Nature - 2015)](https://www.nature.com/articles/nature14236)[^1]|
 |PPO|:hourglass_flowing_sand:(discrete, clip only)|OpenAI|[Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)|
-
+|REINFORCE (vanilla pg)|:heavy_check_mark:||[Simple statistical gradient-following algorithms for connectionist reinforcement learning](https://link.springer.com/article/10.1007/BF00992696)|
+|HER (Hindsight Experience Replay)|:hourglass_flowing_sand:|||
 
 ## Issue
 If there is any issue in algorithm, code or docs etc. Feel free to make issue  
