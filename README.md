@@ -16,7 +16,9 @@ The goal of thest project is easy to train, test, evaluate RL methods and also e
 - [Methods](#methods)
 
 ## How to use
-### DQL
+
+<details><summary>DQL</summary>
+
 We will implement DQL same as [pytorch-DQN](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html) in irl  
 First, we need to wrapper gymnasium to irl env
 
@@ -153,7 +155,7 @@ Also, you can evaluate after training
 env.env = gym.make("CartPole-v1", render_mode="human")
 dql.eval(episode=3)
 ```
-
+</details>
 
 ## Methods
 Follow table shows implemented RL methods  
@@ -164,6 +166,10 @@ Follow table shows implemented RL methods
 |PPO|:hourglass_flowing_sand:(discrete, clip only)|OpenAI|[Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)|
 |REINFORCE (vanilla pg)|:heavy_check_mark:||[Simple statistical gradient-following algorithms for connectionist reinforcement learning](https://link.springer.com/article/10.1007/BF00992696)|
 |HER (Hindsight Experience Replay)|:hourglass_flowing_sand:|||
+
+## Warning
+This project is very very unstable now  
+Some interface is high volatile and structure of class might be changed in future (especially hook)  
 
 ## Issue
 If there is any issue in algorithm, code or docs etc. Feel free to make issue  
