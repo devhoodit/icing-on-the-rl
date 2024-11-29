@@ -209,7 +209,7 @@ class PPOOptimizer:
         rewards = []
         discounted_reward = 0
 
-        batch = PPOBufferCollection.list_to_batch(buffer)
+        batch = PPOBufferCollection.list_to_batch(buffer.get_memory())
 
         for reward, is_terminal in zip(reversed(batch.rewards), reversed(batch.is_terminals)):
             if is_terminal:
@@ -282,7 +282,7 @@ class PPO:
                 hook.after_step(total_step, state, reward)
                 done = terminate or truncated
 
-                buffer.append(
+                buffer.push(
                     PPOBufferCollection(
                         torch.from_numpy(state),
                         action,
