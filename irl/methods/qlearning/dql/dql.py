@@ -244,7 +244,7 @@ class DQL:
                 )
                 total_step += 1
                 hook.after_step(total_step, next_state, reward)
-                score += float(reward)
+                score += reward
                 # push for batch learning
                 replay_memory.push(
                     Transition(
